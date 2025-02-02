@@ -34,7 +34,7 @@ body {
     -2px -2px 0px rgba(0, 0, 0, 0.7), /* Bottom-right */
     2px -2px 0px rgba(0, 0, 0, 0.7),  /* Top-right */
     -2px 2px 0px rgba(0, 0, 0, 0.7);  /* Bottom-left */
-  margin-bottom: 50px;
+  
 }
 
 .flex-container {
@@ -53,12 +53,11 @@ body {
   border: 5px solid var(--gold);
   z-index: 2;
   transition: 0.5s;
-  max-height: 100%;
-  overflow: hidden;
   transform: translateY(100%);
   transition: opacity 0.5s ease, visibility 0s 0.5s, transform 0.5s ease;
   opacity: 0;
   visibility: hidden;
+  max-height: fit-content;
 }
 
 .envelope {
@@ -73,7 +72,6 @@ body {
   border-bottom: 150px solid #ffcccc;
   border-left: 450px solid #ffbfbf;
   z-index: 1;
-  overflow: hidden;
 }
 
 .wrapper {
@@ -130,7 +128,7 @@ body {
 }
 
 .wrapper:hover .content {
-  transform: translateY(-70%);
+  transform: translateY(-40%);
   transition-delay: 0.5s;
   z-index: 4;
   opacity: 1;
@@ -169,3 +167,10 @@ body {
   }
 }
 
+html, body {
+  overflow: hidden;
+}
+
+.yes {
+  z-index: 5;
+}
