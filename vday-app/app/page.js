@@ -3,17 +3,31 @@
 import { useState } from 'react';
 import { Gif } from './components/Gif'
 import { Yes } from './components/Yes'
+import { Message } from './components/Message'
+import DisplayBox from './components/DisplayBox';
 
 export default function Home() {
 
   const mochaHeart = "https://media.tenor.com/cETqhEe3wmQAAAAj/mocha-bear-mocha.gif";
   const mochaHug = "https://media1.tenor.com/m/1gf_Jz8WYH0AAAAC/sami-en-dina-sami-dina.gif";
+  const mochaSad = "https://media.tenor.com/mNO8aMW3GB8AAAAi/milk-and-mocha-mocha.gif/";
 
   const[isYes, setYes] = useState(false);
+  const[content, setContent] = useState(<Message onYes={handleYes} onNo={handleNo}/>);
+
+  function handleYes() {
+    setContent(<Gif gifUrl={mochaHug} altText='Yay' />);
+  }
+
+  function handleNo() {
+    setContent(<Gif gifUrl={mochaSad} altText='Dang' />);
+  }
 
   const toggleYes = () => {
     setYes(!isYes);
   };
+
+
 
   return (
     <div >
@@ -27,10 +41,12 @@ export default function Home() {
             <div className="envelope"></div>
               
               <div className="text-center content transform-style-preserve">
+ 
+                
+                <DisplayBox content={content}/>
               
+                {/*
                 <h1 className="main-text">Will you be my Valentine?</h1>
-                
-                
 
                 <Gif gifUrl={mochaHeart} altText="Mocha Heart GIF"/>
 
@@ -42,6 +58,8 @@ export default function Home() {
                     No
                   </button>
                 </div>
+                */}
+
               </div>
           
           </div>
