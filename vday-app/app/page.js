@@ -11,6 +11,7 @@ export default function Home() {
   const mochaHeart = "https://media.tenor.com/cETqhEe3wmQAAAAj/mocha-bear-mocha.gif";
   const mochaHug = "https://media1.tenor.com/m/1gf_Jz8WYH0AAAAC/sami-en-dina-sami-dina.gif";
   const mochaSad = "https://media.tenor.com/mNO8aMW3GB8AAAAi/milk-and-mocha-mocha.gif/";
+  const hearts = "https://i.gifer.com/3p3j.gif"
 
   const[isYes, setYes] = useState(false);
   const[content, setContent] = useState(<Message onYes={handleYes} onNo={handleNo}/>);
