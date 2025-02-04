@@ -11,13 +11,15 @@ export default function Home() {
   const mochaHeart = "https://media.tenor.com/cETqhEe3wmQAAAAj/mocha-bear-mocha.gif";
   const mochaHug = "https://media1.tenor.com/m/1gf_Jz8WYH0AAAAC/sami-en-dina-sami-dina.gif";
   const mochaSad = "https://media.tenor.com/mNO8aMW3GB8AAAAi/milk-and-mocha-mocha.gif/";
-  const hearts = "https://i.gifer.com/3p3j.gif"
+  const hearts = "https://media.tenor.com/tKCqj_okD1UAAAAi/transparent-hearts.gif"
 
   const[isYes, setYes] = useState(false);
   const[content, setContent] = useState(<Message onYes={handleYes} onNo={handleNo}/>);
+  const [background, setBackground] = useState('');
 
   function handleYes() {
     setContent(<Gif gifUrl={mochaHug} altText='Yay' />);
+    setBackground('url("https://media.tenor.com/tKCqj_okD1UAAAAi/transparent-hearts.gif")')
   }
 
   function handleNo() {
@@ -31,7 +33,11 @@ export default function Home() {
 
 
   return (
-    <div >
+    <div 
+      style={{
+      background: background,
+    }}
+    >
       <main>
         <div className="flex-container">
           
