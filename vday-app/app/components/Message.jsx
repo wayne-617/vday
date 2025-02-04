@@ -95,9 +95,9 @@ export const Message = ({onYes, onNo}) => {
 
   return (
     <div  className="text-center transform-style-preserve justify-center">
-              
-        <h1 className="main-text">Will you be my Valentine?</h1>
-                
+          
+        <h1 className="main-text">Dear Jess,</h1>
+        <h1 className="main-text">Will you be my Valentine?🌹</h1>
                 
 
         <Gif gifUrl={mochaHeart} altText="Mocha Heart GIF" />

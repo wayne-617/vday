@@ -37,6 +37,17 @@ body {
   
 }
 
+.yes-text {
+  font-size: 50px;
+  font-family: var(--font-bungee-tint);
+  margin-top: 5px;
+  text-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.7),   /* Top-left */
+    -2px -2px 0px rgba(0, 0, 0, 0.7), /* Bottom-right */
+    2px -2px 0px rgba(0, 0, 0, 0.7),  /* Top-right */
+    -2px 2px 0px rgba(0, 0, 0, 0.7);  /* Bottom-left */
+}
+
 .flex-container {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -48,7 +59,7 @@ body {
 .content {
   position: absolute;
   background-color: var(--pink);
-  padding: 40px;
+  padding: 30px;
   border-radius: 10px;
   border: 5px solid var(--gold);
   z-index: 2;
@@ -173,4 +184,11 @@ html, body {
 
 .yes {
   z-index: 5;
+}
+
+.confettiGif {
+  z-index: 10;
+  position: absolute;
+  pointer-events: none;
+  padding-top: 80%;
 }
